@@ -16,4 +16,4 @@ RUN curl -fsSL https://top.zeabur.app/jenkins/jnlpJars/agent.jar > /usr/local/bi
 RUN touch /debug-flag
 USER jenkins
 
-CMD java -jar /usr/local/bin/agent.jar -jnlpUrl https://top.zeabur.app/jenkins/ -secret f16e660ad4ddd8f1f4a36ab98a34db8633d8fea718beb4efc2f307623f3c45a9 -name test
+CMD -jnlpUrl https://top.zeabur.app/jenkins/ -secret f16e660ad4ddd8f1f4a36ab98a34db8633d8fea718beb4efc2f307623f3c45a9 -name test
