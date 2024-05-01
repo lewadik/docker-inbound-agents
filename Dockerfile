@@ -16,4 +16,4 @@ RUN curl -fsSL https://dev.zeabur.app/jenkins/jnlpJars/agent.jar > /usr/local/bi
 RUN touch /debug-flag
 #USER jenkins
 #ENTRYPOINT ["/usr/local/bin/agent.jar"]
-CMD ["docker run --init jenkins/inbound-agent -url https://dev.zeabur.app/jenkins/ -secret 8632a53674b07300e6f39144a3bc4a93bd877a8ba508101c0f7bea586880fd9e -name agent"]
+CMD ["/usr/local/bin/docker run --init jenkins/inbound-agent -url https://dev.zeabur.app/jenkins/ -secret 8632a53674b07300e6f39144a3bc4a93bd877a8ba508101c0f7bea586880fd9e -name agent"]
