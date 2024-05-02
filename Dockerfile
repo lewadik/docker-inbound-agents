@@ -8,4 +8,4 @@ COPY --from=jnlp /usr/local/bin/jenkins-agent /usr/local/bin/jenkins-agent
 COPY --from=jnlp /usr/share/jenkins/agent.jar /usr/share/jenkins/agent.jar
 
 ENTRYPOINT ["/usr/local/bin/jenkins-agent"]
-CMD ["-url https://dev.zeabur.app/jenkins/ -secret 8632a53674b07300e6f39144a3bc4a93bd877a8ba508101c0f7bea586880fd9e -name agent"]
+CMD ["-jnlpUrl https://dev.zeabur.app/jenkins/ -secret 8632a53674b07300e6f39144a3bc4a93bd877a8ba508101c0f7bea586880fd9e -name agent"]
